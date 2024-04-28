@@ -20,7 +20,7 @@ def one_state(state_id):
     """ get state by id"""
     state = storage.get(State, state_id)
     if state is None:
-        return jsonify({"error": "Not found"}), 404
+        abort(404)
     return jsonify(state.to_dict())
 
 
