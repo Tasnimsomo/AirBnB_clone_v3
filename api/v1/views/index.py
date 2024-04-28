@@ -7,10 +7,10 @@ from models import storage
 from flask import Flask
 
 @app_views.route('/status')
-def status() 
+def status():
 	"""
     Returns a JSON status
-    """:
+    """
     return jsonify({'status': 'OK'})
 
 
