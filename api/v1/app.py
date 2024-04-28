@@ -20,11 +20,10 @@ def app_tear(error):
 @app.errorhandler(404)
 def handle_404_error(error):
     """ Loads a custom 404 page not found """
-    error_response = {"error": "Not found"}
     return make_response(jsonify({'error': "Not found"}), 404)
 
 
 if __name__ == "__main__":
-    host = getenv('HBNB_API_HOST', '0.0.0.0')
-    port = int(getenv('HBNB_API_PORT', 5000))
-    app.run(host=host, port=port, threaded=True)
+    host = getenv('HBNB_API_HOST', default='0.0.0.0')
+    port = int(getenv('HBNB_API_PORT', default=5000)
+    app.run(host, port, threaded=True)
