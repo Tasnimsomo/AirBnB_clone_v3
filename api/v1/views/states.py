@@ -8,7 +8,7 @@ from models import storage
 
 
 @app_views.route('/states', methods=['GET'], strict_slashes=False)
-def get_state():
+def every_state:
     """ get all by id """
     states = storage.all(State)
     for state in states:
@@ -16,7 +16,7 @@ def get_state():
 
 
 @app_views.route('/states/<state_id>', methods=['GET'], strict_slashes=False)
-def get_state(state_id):
+def one_state(state_id):
     """ get state by id"""
     state = storage.get(State, state_id)
     if state is None:
