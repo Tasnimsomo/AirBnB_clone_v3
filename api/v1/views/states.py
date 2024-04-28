@@ -7,7 +7,7 @@ from api.v1.views import app_views
 from models import storage
 
 
-@app_views.route('/states', methods['GET'], strict_slashes=False)
+@app_views.route('/states', methods=['GET'], strict_slashes=False)
 def get_state():
     """ get all by id """
     states = storage.all(State)
