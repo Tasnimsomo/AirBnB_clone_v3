@@ -1,11 +1,13 @@
-s module contains the principal application
+#!/usr/bin/python3
+"""
+This module contains the principal application
 """
 from flask import jsonify, request, abort
 from models.state import State
 from api.v1.views import app_views
 from models import storage
 from models.city import City
-"""
+
 
 @app_views.route('/states/<state_id>/cities',
                  methods=['GET'], strict_slashes=False)
