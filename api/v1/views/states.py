@@ -11,9 +11,8 @@ from models import storage
 def every_state():
     """ get all by id """
     states = storage.all(State)
-    for state in states:
-        return jsonify([state.to_dict()])
-
+    states_list = [state.to_dict() for state in states.values()]
+    return jsonify(states_list)
 
 @app_views.route('/states/<state_id>', methods=['GET'], strict_slashes=False)
 def one_state(state_id):
