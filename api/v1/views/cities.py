@@ -45,7 +45,7 @@ def delete_city(city_id):
         '/states/<state_id>/cities', methods=['POST'], strict_slashes=False)
 def create_city(state_id):
     """ create new instance """
-    state = storage.get("State", state_id)
+    state = storage.get(State, state_id)
     if not state:
         abort(404)
     new_city = request.get_json()
