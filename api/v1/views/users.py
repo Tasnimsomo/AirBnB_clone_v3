@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+"""Create a new view for User object that handles all default RESTFul API"""
 from flask import jsonify, request, abort
 from models import storage
 from models.user import User
