@@ -13,7 +13,7 @@ from models.city import City
                  methods=['GET'], strict_slashes=False)
 def get_cities(state_id):
     """ Gets cities for state_id """
-    state = storage.get(State, state_id)
+    state = storage.all(State).values()
     if not state:
         abort(404)
     cities_json = [city.to_dict() for city in state.cities]
