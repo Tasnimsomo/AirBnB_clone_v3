@@ -42,7 +42,7 @@ def delete_city(city_id):
 
 
 @app_views.route(
-        '/states/<state_id>/cities', methods=['POST'], strict_slashes=False)
+    '/states/<state_id>/cities', methods=['POST'], strict_slashes=False)
 def create_city(state_id):
     """ create new instance """
     state = storage.get(State, state_id)
@@ -57,7 +57,8 @@ def create_city(state_id):
     setattr(city, 'state_id', state_id)
     storage.new(city)
     storage.save()
-    return make_response(jsonify(city.to_dict()), 201) 
+    return make_response(jsonify(city.to_dict()), 201)
+
 
 @app_views.route('/cities/<city_id>', methods=['PUT'], strict_slashes=False)
 def update_city(city_id):
