@@ -1,3 +1,6 @@
+#!/usr/bin/python3
+""" Create a new view for Place objects that handles all default RESTFul"""
+
 from flask import jsonify, request, abort
 from models import storage
 from models.city import City
