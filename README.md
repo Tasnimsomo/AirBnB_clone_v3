@@ -154,7 +154,7 @@ EOF  all  create  destroy  help  quit  show  update
 No known bugs at this time. 
 
 ## Authors
-Tasnim Somo - [Github](https://github.com/Tasnimsomo)  
+Tasnim M Somo - [Github](https://github.com/Tasnimsomo)  
 OmarFarouq Madey - [Github](https://github.com/farruk12)
 
 ## License
